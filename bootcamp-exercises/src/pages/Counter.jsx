@@ -1,3 +1,11 @@
+import "../assets/styles/counter.css";
+
+import CounterCard from "../components/CounterCard";
+
 export default function Counter() {
-  return <h1>Counter</h1>;
+  return (
+    <main className="main-counter fade-in">
+      <CounterCard />
+    </main>
+  );
 }
