@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Ecommerce from "../pages/Ecommerce";
 import NotFound from "../../../common/pages/NotFound";

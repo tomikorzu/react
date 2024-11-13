@@ -1,8 +1,8 @@
-import styles from "../assets/styles/cartBtn.module.css";
+import "./cart-button.css";
 
 export default function CartButton() {
   return (
-    <button className={styles.cartBtn}>
+    <button className="cartBtn">
       <i className="fa-solid fa-cart-shopping"></i>
     </button>
   );

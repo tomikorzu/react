@@ -1,0 +1,49 @@
+.main-ecommerce {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  color: #111;
+  margin-top: 75px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  max-width: 300px;
+  background-color: #e2e2e2;
+  color: #111;
+  border-radius: 10px;
+  height: 100%;
+  transition: all 0.4s;
+  cursor: pointer;
+
+  figure {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+  img {
+    background-color: #c2c2c2;
+    width: 100%;
+    transition: all 0.4s;
+    object-fit: cover;
+  }
+
+  .container-card {
+    padding: 10px 20px 20px;
+  }
+}
+.product-card:hover {
+  filter: brightness(110%);
+  img {
+    transform: scale(1.1);
+  }
+}

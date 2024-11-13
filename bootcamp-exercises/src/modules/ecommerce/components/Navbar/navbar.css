@@ -1,0 +1,27 @@
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #5f71e7;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  h1 {
+    color: #f1f1f1;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+  }
+  input {
+    width: 33.3%;
+  }
+  button {
+    max-width: fit-content;
+    background-color: transparent;
+    color: #f1f1f1;
+    font-size: 1.25em;
+  }
+}

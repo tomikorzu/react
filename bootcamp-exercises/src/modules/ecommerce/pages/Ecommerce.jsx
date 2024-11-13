@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
-import CartButton from "../components/CartButton";
+import ProductCard from "../components/ProductCard/ProductCard";
+import MainLayout from "../layouts/MainLayout";
 
 export default function Ecommerce() {
   const [products, setProducts] = useState([]);
+  const [searchProduct, setSearchProduct] = useState("");
 
   async function fetchAPI() {
     const response = await fetch("https://dummyjson.com/products");
@@ -15,16 +17,30 @@ export default function Ecommerce() {
     fetchAPI();
   }, []);
 
+  const productsFiltred = products.filter((product) => {
+    return product.title.toLowerCase().includes(searchProduct.toLowerCase());
+  });
+
   return (
-    <>
-      <h1>Ecommerce</h1>
-      {/* <ProductCard /> */}
-      <ul>
-        {products.map((product) => {
-          return <li key={product.id}>{product.title}</li>;
-        })}
-      </ul>
-      <CartButton />
-    </>
+    <MainLayout action={setSearchProduct}>
+      <main className="fade-in main-ecommerce">
+        <ul className="product-list">
+          {productsFiltred.length > 0 ? "" : <h2 className="fade-in">No products found</h2>}
+          {productsFiltred.map((product) => {
+            return (
+              <ProductCard
+                key={product.id}
+                image={product.images}
+                title={product.title}
+                price={product.price}
+                discount={product.discountPercentage}
+                description={product.description}
+                rating={product.rating}
+              />
+            );
+          })}
+        </ul>
+      </main>
+    </MainLayout>
   );
 }

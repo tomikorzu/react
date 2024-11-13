@@ -38,7 +38,7 @@ export default function CounterCard() {
     setCount((prev) => prev - 1);
   }
   return (
-    <article className="container">
+    <article className="container-counter">
       <Title variants="title-container">
         Fancy
         <br /> Counter
