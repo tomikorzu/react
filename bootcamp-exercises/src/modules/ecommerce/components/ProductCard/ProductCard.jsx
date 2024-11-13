@@ -19,12 +19,13 @@ export default function ProductCard({
           </figure>
           <div className="container-card">
             <h3>{title}</h3>
-            <span className="price">{price}</span>
-            <span className="price-with-discount">
-              {priceWithDiscount.toFixed(2)}
-            </span>
+            <span>{priceWithDiscount.toFixed(2)}</span>
+            <span className="price-with-discount">{price}</span>
             <p>{description}</p>
-            <span>{rating}</span>
+            <span className="rating">
+              <i className="fa-solid fa-star"></i>
+              {rating}
+            </span>
           </div>
         </article>
       </li>
