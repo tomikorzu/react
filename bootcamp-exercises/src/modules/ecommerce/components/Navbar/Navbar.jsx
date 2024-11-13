@@ -2,7 +2,7 @@ import CartButton from "../CartButton/CartButton";
 import "./navbar.css";
 import SearchInput from "../SearchInput/SearchInput";
 
-export default function Navbar({ action }) {
+export default function Navbar({ action, productsCount }) {
   return (
     <>
       <header className="navbar-header">
@@ -13,7 +13,7 @@ export default function Navbar({ action }) {
           Ecommerce
         </h1>
         <SearchInput action={action} />
-        <CartButton />
+        <CartButton productsCount={productsCount} />
       </header>
     </>
   );

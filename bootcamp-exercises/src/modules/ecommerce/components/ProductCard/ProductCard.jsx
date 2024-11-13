@@ -1,18 +1,20 @@
 import "./product-card.css";
 
 export default function ProductCard({
+  id,
   image,
   title,
   price,
   discount,
   description,
   rating,
+  action,
 }) {
   const priceWithDiscount = price - (price * discount) / 100;
 
   return (
     <>
-      <li>
+      <li onClick={() => action(id)}>
         <article className="product-card">
           <figure>
             <img src={image} alt={title} />
