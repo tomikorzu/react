@@ -1,0 +1,26 @@
+.cart-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  width: 375px;
+  transition: all 0.4s;
+  animation: slideRight 0.4s forwards;
+
+  button:first-child {
+    color: #000;
+  }
+}
+.hide-cart-menu {
+  transform: translateX(400px);
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
